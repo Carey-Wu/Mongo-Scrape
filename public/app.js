@@ -27,23 +27,23 @@ $(document).on("click", "h4", function () {
             // If there's a note in the article
             if (data.comment.length >= 1) {
                 // The title of the article
-                $("#comments").append("<h2>" + data.title + "</h2>");
+                $("#comments").append("<h3>" + data.title + "</h3>");
                 // An input to enter a new title
                 $("#comments").append("<input id='titleinput' name='title' >");
                 // A textarea to add a new note body
                 $("#comments").append("<textarea id='bodyinput' name='body'></textarea>");
                 // A button to submit a new note, with the id of the article saved to it
-                $("#comments").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
+                $("#comments").append("<button data-id='" + data._id + "' id='savenote' class= 'btn btn-primary'>Save Note</button>");
 
                 for (var i = 0; i < data.comment.length; i++) {
                     // The title of the article
-                    $("#comments").append("<h2>" + data.title + "</h2>");
+                    $("#comments").append("<h3>" + data.title + "</h3>");
                     // An input to enter a new title
                     $("#comments").append("<input id=" + data.comment[i]._id + " class='titleinput" + i + "' name='title' >");
                     // A textarea to add a new note body
                     $("#comments").append("<textarea id=" + data.comment[i]._id + " class='bodyinput" + i + "' name='body'></textarea>");
                     // // A button to delete a note, with the id of the article saved to it
-                    $("#comments").append("<button data-id='" + data._id + "' id='deletenote'>Delete Note</button>");
+                    $("#comments").append("<button data-id='" + data._id + "' id='deletenote' class= 'btn btn-danger'>Delete Note</button>");
                     // Place the title of the note in the title input
                     $(".titleinput" + i).val(data.comment[i].title);
                     // Place the body of the note in the body textarea
@@ -53,13 +53,13 @@ $(document).on("click", "h4", function () {
             }
             else {
                 // The title of the article
-                $("#comments").append("<h2>" + data.title + "</h2>");
+                $("#comments").append("<h3>" + data.title + "</h3>");
                 // An input to enter a new title
                 $("#comments").append("<input id='titleinput' name='title' >");
                 // A textarea to add a new note body
                 $("#comments").append("<textarea id='bodyinput' name='body'></textarea>");
                 // A button to submit a new note, with the id of the article saved to it
-                $("#comments").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
+                $("#comments").append("<button data-id='" + data._id + "' id='savenote' class= 'btn btn-primary'>Save Note</button>");
             }
         });
 });
@@ -83,22 +83,22 @@ $(document).on("click", "p", function () {
             // If there's a note in the article
             if (data.comment.length >= 1) {
                 // The title of the article
-                $("#comments").append("<h2>" + data.title + "</h2>");
+                $("#comments").append("<h3>" + data.title + "</h3>");
                 // An input to enter a new title
                 $("#comments").append("<input id='titleinput' name='title' >");
                 // A textarea to add a new note body
                 $("#comments").append("<textarea id='bodyinput' name='body'></textarea>");
                 // A button to submit a new note, with the id of the article saved to it
-                $("#comments").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
+                $("#comments").append("<button data-id='" + data._id + "' id='savenote' class= 'btn btn-primary'>Save Note</button>");
                 for (var i = 0; i < data.comment.length; i++) {
                     // The title of the article
-                    $("#comments").append("<h2>" + data.title + "</h2>");
+                    $("#comments").append("<h3>" + data.title + "</h3>");
                     // An input to enter a new title
                     $("#comments").append("<input id=" + data.comment[i]._id + " class='titleinput" + i + "' name='title' >");
                     // A textarea to add a new note body
                     $("#comments").append("<textarea id=" + data.comment[i]._id + " class='bodyinput" + i + "' name='body'></textarea>");
                     // // A button to delete a note, with the id of the article saved to it
-                    $("#comments").append("<button data-id='" + data._id + "' id='deletenote'>Delete Note</button>");
+                    $("#comments").append("<button data-id='" + data._id + "' id='deletenote'  class= 'btn btn-danger'>Delete Note</button>");
                     // Place the title of the note in the title input
                     $(".titleinput" + i).val(data.comment[i].title);
                     // Place the body of the note in the body textarea
@@ -108,13 +108,13 @@ $(document).on("click", "p", function () {
             }
             else {
                 // The title of the article
-                $("#comments").append("<h2>" + data.title + "</h2>");
+                $("#comments").append("<h3>" + data.title + "</h3>");
                 // An input to enter a new title
                 $("#comments").append("<input id='titleinput' name='title' >");
                 // A textarea to add a new note body
                 $("#comments").append("<textarea id='bodyinput' name='body'></textarea>");
                 // A button to submit a new note, with the id of the article saved to it
-                $("#comments").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
+                $("#comments").append("<button data-id='" + data._id + "' id='savenote' class= 'btn btn-primary'>Save Note</button>");
             }
         });
 });
