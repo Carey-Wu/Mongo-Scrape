@@ -43,7 +43,7 @@ $(document).on("click", "h4", function () {
                     // A textarea to add a new note body
                     $("#comments").append("<textarea id=" + data.comment[i]._id + " class='bodyinput" + i + "' name='body'></textarea>");
                     // // A button to delete a note, with the id of the article saved to it
-                    $("#comments").append("<button data-id='" + data._id + "' id='deletenote' class= 'btn btn-danger'>Delete Note</button>");
+                    $("#comments").append("<button data-id='" + data.comment[i]._id + "' id='deletenote' class= 'btn btn-danger'>Delete Note</button>");
                     // Place the title of the note in the title input
                     $(".titleinput" + i).val(data.comment[i].title);
                     // Place the body of the note in the body textarea
@@ -98,7 +98,7 @@ $(document).on("click", "p", function () {
                     // A textarea to add a new note body
                     $("#comments").append("<textarea id=" + data.comment[i]._id + " class='bodyinput" + i + "' name='body'></textarea>");
                     // // A button to delete a note, with the id of the article saved to it
-                    $("#comments").append("<button data-id='" + data._id + "' id='deletenote'  class= 'btn btn-danger'>Delete Note</button>");
+                    $("#comments").append("<button data-id='" + data.comment[i]._id + "' id='deletenote'  class= 'btn btn-danger'>Delete Note</button>");
                     // Place the title of the note in the title input
                     $(".titleinput" + i).val(data.comment[i].title);
                     // Place the body of the note in the body textarea
@@ -134,6 +134,27 @@ $(document).on("click", "#savenote", function () {
             // Value taken from note textarea
             body: $("#bodyinput").val()
         }
+    })
+        // With that done
+        .then(function (data) {
+            // Log the response
+            console.log(data);
+            // Empty the notes section
+            $("#comments").empty();
+        });
+    // Also, remove the values entered in the input and textarea for note entry
+    $("#titleinput").val("");
+    $("#bodyinput").val("");
+});
+
+$(document).on("click", "#deletenote", function () {
+    // Grab the id associated with the article from the submit button
+    var thisId = $(this).attr("data-id");
+
+    // Now make an ajax call for the Article
+    $.ajax({
+        method: "DELETE",
+        url: "/articles/" + thisId,
     })
         // With that done
         .then(function (data) {
