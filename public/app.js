@@ -1,3 +1,4 @@
+
 // Grab the articles as a json
 $.getJSON("/articles", function (data) {
     // For each one
@@ -6,6 +7,14 @@ $.getJSON("/articles", function (data) {
         $("#articles").append("<h4 data-id='" + data[i]._id + "'>" + data[i].title + "</h4>" + "<p data-id='" + data[i]._id + "'>" + data[i].summary + "<p/>" + "<p data-id='" + data[i]._id + "'>" + data[i].link + "<p/>");
     }
 });
+
+$("#scrapeNow").click(function () {
+    window.location.href = "/scrape";
+})
+
+$("#infoNow").click(function () {
+    window.location.reload();
+})
 
 
 // Whenever someone clicks a h4 tag

@@ -11,18 +11,28 @@
 
 <body>
     <div id="wrapper">
-        <h1>Article Scraper</h1>
-        <h2><i>Science Articles Courtesy of MIT</i></h2>
-        <!-- <div class="container"> -->
-            <div class="row">
-                <div class="col-xl-8">
-                    <div id="articles"></div>
-                </div>
-                <div class="col-xl-4">
-                    <div id="comments"></div>
-                </div>
+        <div class="row">
+            <div class="col-xl-8 text-center">
+                <h1 class="text-center">Article Scraper</h1>
+                <h2 class="text-center"><i>Science Articles Courtesy of MIT</i></h2>
             </div>
-        <!-- </div> -->
+        </div>
+        
+        <div class="row">
+            <div class="col-xl-8 text-center">
+                <button class='btn btn-success text-center' id='scrapeNow'>Scrape Articles</button>
+                <button class='btn btn-info text-center' id='infoNow'>View Articles</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-8">
+                <div id="articles"></div>
+            </div>
+            <div class="col-xl-4">
+                <div id="comments"></div>
+            </div>
+        </div>
+        
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./app.js"></script>
